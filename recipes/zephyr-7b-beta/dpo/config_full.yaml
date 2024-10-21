@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: alignment-handbook/zephyr-7b-sft-full
+model_name_or_path: /home/peterjin/handbook-ckpt/zephyr-7b-sft-full
 torch_dtype: null
 
 # Data training arguments
@@ -30,10 +30,12 @@ max_length: 1024
 max_prompt_length: 512
 num_train_epochs: 1
 optim: adamw_torch
-output_dir: data/zephyr-7b-dpo-full
+output_dir: /home/peterjin/handbook-ckpt/zephyr-7b-dpo-full-debug
 per_device_train_batch_size: 8
 per_device_eval_batch_size: 8
 push_to_hub: true
+report_to:
+- wandb
 save_strategy: "steps"
 save_steps: 100
 save_total_limit: 1
